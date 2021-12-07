@@ -19,11 +19,23 @@ namespace MyWhere
 
             return result;
         }
+        static IEnumerable<TResult> MySelect<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, TResult> selector)
+        {
+            var result = new List<TResult>();
+            foreach (var item in source)
+            {
+                var convertedItem = selector(item);
+                result.Add(convertedItem);
+            }
+
+            return result;
+        }
+
 
         static void Main(string[] args)
         {
-            var source = new int[5] {1, 2, 3, 4, 5};
-            var result = source.Where(x => x > 2);
+            var source = new int[5] { 1, 2, 3, 4, 5 };
+            var result = source.Select(x => x > 2);
             Console.WriteLine(string.Join(", ", result));
         }
     }
