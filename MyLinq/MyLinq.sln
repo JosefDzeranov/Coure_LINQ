@@ -1,6 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWhere", "MyWhere\MyWhere.csproj", "{76E2A82E-72FC-453C-9A16-518848394DBE}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Main", "MyWhere\Main.csproj", "{76E2A82E-72FC-453C-9A16-518848394DBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +15,11 @@ Global
 		{76E2A82E-72FC-453C-9A16-518848394DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76E2A82E-72FC-453C-9A16-518848394DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76E2A82E-72FC-453C-9A16-518848394DBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBB3E150-D7FF-4C0C-A47A-B5B8EE50ABA6}
 	EndGlobalSection
 EndGlobal

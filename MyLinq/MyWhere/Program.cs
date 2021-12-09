@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MyWhere
+namespace Main
 {
     static class Program
     {
@@ -30,13 +30,20 @@ namespace MyWhere
 
             return result;
         }
-
-
-        static void Main(string[] args)
+        static IEnumerable<TResult> MySelectMany<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, IEnumerable<TResult>> selector)
         {
-            var source = new int[5] { 1, 2, 3, 4, 5 };
-            var result = source.Select(x => x > 2);
-            Console.WriteLine(string.Join(", ", result));
+            var result = new List<TResult>();
+            foreach (var item in source)
+            {
+                var convertedItems = selector(item);
+                result.AddRange(convertedItems);
+            }
+
+            return result;
+        }
+
+        static void Main()
+        {
         }
     }
 }
